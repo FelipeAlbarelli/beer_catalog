@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <title>Beers Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- usa svg como favcon da página, svg é um emoji -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127866</text></svg>">
+</head>
+<body>
+    <div class="shadow hidden"></div>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">Beer Catalog &#127866</h1>
+        </header>
+        <main class="main">
+            <form class="search-form" action="#">
+                    <input id="search-area" placeholder="Beer name..." class="search-form__input" type="text">
+                    <button id="search-btn" class="search-form__btn btn">Search</button>
+                    <a id="more-options" class="search-form__btn btn--more">+</a>
+            </form>
+            <form id='options' class="options hidden">
+                <div class="options__group">
+                    <label>abv</label>
+                    <input name="abvMin" min="0" type="number" placeholder="min">
+                    <input name='abvMax' min="0" type="number" placeholder="max">
+                </div>
+                <div class="options__group">
+                    <label>ibu</label>
+                    <input name="ibuMin" min="0" type="number" placeholder="min">
+                    <input name="ibuMax" min="0" type="number" placeholder="max">
+                </div>
+                <div class="options__group">
+                    <label>ebc</label>
+                    <input name="ebcMin" min="0" type="number" placeholder="min">
+                    <input name="ebcMax" min="0" type="number" placeholder="max">
+                </div>
+            </form>
+            <div class="beers-container" id="beersCatalog">
+                <!-- beers cards are included here  -->
+                <!-- 
+                    .beer-card__container
+                        .beer-card__name
+                        .beer-card__img
+                        .beer-card__decription
+                 -->
+            </div>
+            <nav class="page-nav">
+                <button class="btn-nav" id="previus-page">&#128072</button>
+                <button class="btn-nav" id="current-page">1</button>
+                <button class="btn-nav" id="next-page">&#128073</button>
+            </nav>
+        </main>
+        <footer class="footer">
+                <p>Coded by: Felipe Albarelli</p>
+                <p>Powered by: <a href="https://punkapi.com/documentation/v2">Punk API</a></p>
+
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
